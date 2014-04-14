@@ -10,4 +10,8 @@ class ApplicationController < ActionController::Base
   def file
     render :text => request.headers['X-File']
   end
+
+  def app_upload
+    render :text => 'YES'
+  end
 end
