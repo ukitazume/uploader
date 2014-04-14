@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   #     end
   #   end
   match '/file' => 'application#file', via: [:get, :post]
+  match '/upload' => 'application#file', via: [:get, :post]
 
   # Example resource route with sub-resources:
   #   resources :products do
