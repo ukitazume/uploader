@@ -4,10 +4,6 @@ class ApplicationController < ActionController::Base
   # protect_from_forgery with: :exception
 
   def file
-    header = request.headers.to_h
-    header_info = header.reduce do |k, v|
-      "#{k} #{v}\n<br/>"
-    end
-    render :text => header_info
+    render :text => request.headers['X-File']
   end
 end
